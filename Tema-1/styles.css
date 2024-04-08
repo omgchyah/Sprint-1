@@ -1,0 +1,139 @@
+body {
+    width: 1200px;
+    
+}
+
+header {
+display: flex;
+flex-wrap: wrap;
+background-color: black;
+padding: 20px;
+box-sizing: border-box;
+margin: 20px;
+}
+
+.logo {
+    background-color: red;
+    flex-basis: 25%;
+    box-sizing: border-box;
+    border-width: 20px 10px 20px 20px;
+    border-style: solid;
+    border-color: grey;
+    padding: 20px;
+}
+
+.nav {
+    background-color: red;
+    flex-basis: 50%;
+    box-sizing: border-box;
+    border-width: 20px 10px 20px 10px;
+    border-style: solid;
+    border-color: grey;
+    padding: 20px;
+}
+
+.social {
+    background-color: red;
+    flex-basis: 25%;
+    box-sizing: border-box;
+    border-width: 20px 20px 20px 10px;
+    border-style: solid;
+    border-color: grey;
+    padding: 20px;
+}
+
+.banner {
+    margin-top: 20px;
+    background-color: yellow;
+    flex-basis: 100%;
+    box-sizing: border-box;
+    border: 20px solid orange;
+    padding: 20px;
+}
+
+.main-container {
+    background-color: black;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+    box-sizing: border-box;
+    margin: 20px;
+    gap: 20px;
+}
+
+.left-side {
+    display: flex;
+    flex-basis: 65%;
+    flex-wrap: wrap;
+    background-color: grey;
+    gap: 20px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.right-side {
+    flex-basis: 33%;
+    display: flex;
+    flex-wrap: nowrap;
+    background-color: red;
+    gap: 20px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.article1 {
+    width: calc(50% - 10px);
+    background-color: blue;
+    padding: 20px;
+    box-sizing: border-box;
+    
+}
+
+.article2 {
+    width: calc(50% - 10px);
+    background-color: blue;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.article3 {
+    width: calc(50% - 10px);
+    background-color: blue;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.article4 {
+    width: calc(50% - 10px);
+    background-color: blue;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.navegacion {
+    width: 100%;
+    background-color: cyan;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.publicidad {
+    width: 100%;
+    background-color: yellow;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    padding: 20px;
+    margin: 20px;
+    min-height: auto;
+}
+
+.pie {
+    background-color: yellow;
+    padding: 20%;
+}
