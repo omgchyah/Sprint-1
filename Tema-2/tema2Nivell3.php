@@ -25,7 +25,7 @@ function eratostenes($num1, $num2) {
     if ($respuesta == "") {
         $respuesta = "No hay número primos.";
     } else {
-        $respuesta = rtrim($respuesta, " + ");
+        $respuesta = rtrim($respuesta, " + ");//Se elimina el último " + "
     }
 
     return $respuesta;
