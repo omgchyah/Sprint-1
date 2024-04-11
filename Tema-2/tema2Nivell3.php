@@ -7,11 +7,11 @@ function eratostenes($num1, $num2) {
 
     //Loop for para verificar cada numero del rango
     for ($i = $num1; $i <= $num2; $i++) {
-        $isPrimo = true;
+        $isPrimo = true; //Se asume que el número es primo
 
-        //Modulo debe ser diferente a 0
+        //Modulo debe ser diferente a 0 en todas las iteraciones para que sea primo
         for ($j = 2; $j < $i; $j++) {
-            if ($i % $j == 0 && $i != $j) {
+            if ($i % $j == 0 && $i != $j) { //Se excluye la division entre sí mismo
                 $isPrimo = false;
             }
         }
@@ -31,7 +31,7 @@ function eratostenes($num1, $num2) {
     return $respuesta;
 }
 
-echo eratostenes(10, 20);
+echo eratostenes(10, 100);
 
 
 ?>
