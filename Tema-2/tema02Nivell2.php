@@ -1,5 +1,7 @@
 <?php
 
+//NIVELL 2
+
 //EXERCICI 1
 
 $minutos = 0;
