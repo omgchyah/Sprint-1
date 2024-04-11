@@ -2,6 +2,9 @@
 
 // NIVEL 3
 
+//Criba de Eratóstenes
+//Busca todos los números primos dentro de un intervalo de número (estos incluidos)
+
 function eratostenes($num1, $num2) {
     $respuesta = "";
 
@@ -31,7 +34,7 @@ function eratostenes($num1, $num2) {
     return $respuesta;
 }
 
-echo eratostenes(10, 100);
+echo eratostenes(13, 97);
 
 
 ?>

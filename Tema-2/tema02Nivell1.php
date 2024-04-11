@@ -2,7 +2,7 @@
 
 //NIVELL 1
 
-//EXERCICI 1
+//EXERCICI 1 Defineix variables integer, double, string i boolean
 
 $numInt = 4;
 $numDou = 3.1416;
@@ -17,7 +17,7 @@ const MI_NOMBRE = "Mi nombre es Rossana y me gusta programar.";
 
 echo ucwords(MI_NOMBRE);
 
-//EXERCICI 2
+//EXERCICI 2 Imprimir String "Hello, World!"
 
 $helloWorld = "Hello, World!";
 
@@ -34,7 +34,7 @@ $str1 = "Este es el curso de PHP";
 
 echo $str1 . " y aprendemos a escribir " . $helloWorld . " o " . $helloMayus . " que tiene " . $mida . " caracteres y al revés se escribe " . $alReves;
 
-//EXERCICI 3
+//EXERCICI 3 Operadores y función Calculadora
 
 $x = 3;
 $y = 4;
@@ -82,7 +82,9 @@ function miCalculadora($num1, $num2) {
 
 echo miCalculadora(3, 4);
 
-//Exercici 4
+//Exercici 4 Programa contador
+
+//Parametros: número inicial, incrementador (En este caso, cuenta de 2 en 2) y número final
 
 function contador($numInicial, $incrementador, $numFinal) {
 
@@ -100,6 +102,9 @@ function contador($numInicial, $incrementador, $numFinal) {
 echo contador(10, 2, 100);
 
 //EXERCICI 5
+
+//Funcion que valora a los estudiantes de acuerdo a sus notas
+
 
 function gradoEstudiante($nota) {
 
@@ -122,6 +127,8 @@ function gradoEstudiante($nota) {
 echo gradoEstudiante(32);
 
 //EXERCICI 6
+
+//Funcion que arroja True o False con un 50% de probabilidades
 
 function isBitten() {
 

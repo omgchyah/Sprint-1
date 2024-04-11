@@ -4,6 +4,9 @@
 
 //EXERCICI 1
 
+//Función que calcula costo total de una llamada
+//(3 primeros minutos = 10 cent + 5 cent por cada minuto adicional)
+
 $minutos = 0;
 
 function costoLlamada($minutos) {
@@ -22,6 +25,8 @@ function costoLlamada($minutos) {
 echo costoLlamada(4);
 
     // EXERCICI 2
+
+    //Carrito de la compra
 
     $cantidadXocos = 0;
     $cantidadXiclets = 0;
