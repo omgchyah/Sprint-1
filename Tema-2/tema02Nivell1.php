@@ -5,9 +5,9 @@
 $numInt = 4;
 $numDou = 3.1416;
 $str = "números";
-$esGrande = false;
+$esPetit = true;
 
-if($esGrande == false){
+if($esPetit){
     echo "Los números $numInt y $numDou son $str pequeños.";
 }
 
