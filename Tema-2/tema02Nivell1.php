@@ -18,15 +18,14 @@ echo ucwords(MI_NOMBRE);
 //EXERCICI 2
 
 $helloWorld = "Hello, World!";
+
 $helloMayus = strtoupper($helloWorld);
 echo $helloMayus;
 
 $mida = strlen($helloWorld);
-
 echo $mida;
 
 $alReves = strrev($helloWorld);
-
 echo $alReves;
 
 $str1 = "Este es el curso de PHP";
@@ -80,5 +79,59 @@ function miCalculadora($num1, $num2) {
 }
 
 echo miCalculadora(3, 4);
+
+//Exercici 4
+
+function contador($numInicial, $incrementador, $numFinal) {
+
+    $resultado = "";
+
+    while ($numInicial <= $numFinal) {
+        $simbolo = ($numInicial < $numFinal) ? " + " : ".";
+       $resultado .= $numInicial . $simbolo;
+        $numInicial = $numInicial + $incrementador;
+    }
+
+    return $resultado;
+}
+
+echo contador(10, 2, 100);
+
+//EXERCICI 5
+
+function gradoEstudiante($nota) {
+
+    $resultado = "";
+
+    if ($nota >= 60) {
+        $resultado = "Enhorabuena. Estás en la primera división.";
+    } else if ($nota >= 45 && $nota < 60) {
+        $resultado = "Muy bien. Estás en la Segunda División.";
+    } else if ($nota >= 33 && $nota < 45) {
+        $resultado = "Estás en la Tercera División.";
+    } else {
+        $resultado = "Lo siento. Has reprobado.";
+    }
+
+    return $resultado;
+    
+}
+
+echo gradoEstudiante(32);
+
+//EXERCICI 6
+
+function isBitten() {
+
+    $numRandom = rand(1, 100);
+
+    if ($numRandom <= 50) {
+        return "TRUE";
+    } else {
+        return "FALSE";
+    }
+}
+
+echo isBitten();
 
 ?>
