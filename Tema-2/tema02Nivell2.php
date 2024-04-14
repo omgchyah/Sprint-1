@@ -22,7 +22,7 @@ function costoLlamada($minutos) {
     return "Debe pagar " . $costo . " céntimos.";
 }
 
-echo costoLlamada(4);
+echo costoLlamada(4) . "<br>";
 
     // EXERCICI 2
 
@@ -40,7 +40,7 @@ echo costoLlamada(4);
 
     }
 
-    echo totalCompra(2, 3, 4);
+    echo totalCompra(2, 3, 4) . "<br>";
 
 
 ?>
