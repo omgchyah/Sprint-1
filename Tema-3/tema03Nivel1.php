@@ -35,7 +35,7 @@ echo sizeof($x) . "<br>";
 
 //Exercici 3
 
-function verificarArray($array, $character) {
+function verificarArray(array $array, string $character): bool {
 
     $containsCharacter = false;
 

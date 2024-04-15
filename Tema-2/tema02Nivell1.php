@@ -15,7 +15,7 @@ if($esPetit){
 
 const MI_NOMBRE = "Mi nombre es Rossana y me gusta programar.";
 
-echo ucwords(MI_NOMBRE) . "<br>";
+$modoTitulo = ucwords(MI_NOMBRE) . "<br>";
 
 //EXERCICI 2 Imprimir String "Hello, World!"
 
