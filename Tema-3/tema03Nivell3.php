@@ -38,5 +38,30 @@ foreach($palabrasPares as $palabra) {
     echo $palabra . " ";
 }
 
+//EXERCICI 3
+
+$arrayZ =  array(44, 120, 58, 1000, 9, 2);
+
+function conseguirPrimos($num): bool {
+
+    if($num <= 1) {
+        return false;
+    }
+
+    for($i = 2; $i < $num; $i++) {
+        if($num % $i == 0) {
+            return false;
+        } 
+    }
+
+    return true;
+    
+}
+
+$arrayPrimos = array_filter($arrayZ, 'conseguirPrimos');
+
+$arrayReducido = array_reduce($arrayZ, 'conseguirPrimos');
+
+print_r($arrayZ);
 
 ?>
