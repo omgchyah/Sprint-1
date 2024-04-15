@@ -27,7 +27,7 @@ foreach($numIguales as $num) {
     echo $num . "<br>";
 }
 
-function combinarArrays($array1, $array2) {
+function combinarArrays(array $array1, array $array2): array {
 
     foreach($array2 as $x) {
         array_push($array1, $x);
