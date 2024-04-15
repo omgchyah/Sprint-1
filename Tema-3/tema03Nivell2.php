@@ -38,8 +38,22 @@ function combinarArrays($array1, $array2) {
 
 $arrayFinal = combinarArrays($array1, $array2);
 
+//Declaro un String para poder imprimirlo en pantalla
+$stringArrays = "";
+
+//Concatenar cada número del array
 foreach($arrayFinal as $x){
-    echo $x . ", ";
+    $stringArrays .= $x . ", ";
 }
+
+echo rtrim($stringArrays, ", "); //eliminar la coma al final
+
+//EXERCICI 2
+
+$nombres = array(
+    "Rossana" => array(8, 7, 9),
+    "Carlos" , "Arturo", "Constanza", "Pedro");
+
+
 
 ?>

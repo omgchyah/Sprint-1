@@ -71,16 +71,24 @@ echo $x + $y + $n + $m . "<br>";
 
 echo $x * $y * $n * $m . "<br>";
 
-function miCalculadora($num1, $num2) {
-    $suma = $num1 + $num2;
-    $resta = $num1 - $num2;
-    $mult = $num1 * $num2;
-    $div = $num1 / $num2;
+function miCalculadora($num1, $num2, $operacion) {
 
-    return "Suma= $suma. Resta= $resta. Multiplicación= $mult. División= $div.";
+    $resultado = 0;
+
+    if($operacion == "+") {
+        $resultado = $num1 + $num2;
+    } else if ($operacion == "-") {
+        $resultado = $num1 - $num2;
+    } else if ($operacion == "*") {
+        $resultado = $num1 * $num2;
+    } else if ($operacion == "/") {
+        $resultado = $num1 / $num2;
+    }
+
+    return $resultado;
 }
 
-echo miCalculadora(3, 4) . "<br>";
+echo "Resultado de mi operación: " . miCalculadora(3, 4, "-") . "<br>";
 
 //Exercici 4 Programa contador
 
