@@ -18,11 +18,12 @@ echo $numeros[4] . "<br>";
 
 $x = array (10, 20, 30, 40, 50, 60);
 
-echo sizeof($x) . "<br>";
+echo "Número de elementos del array: " . sizeof($x) . "<br>";
 
 //Eliminar elementos de la lista con indice [0] el primero
 array_splice($x, 0, 1);
 
+echo "Array resultante:<br>";
 //Imprimir foreach
 foreach($x as $a) {
     echo $a . "<br>";
@@ -31,7 +32,7 @@ foreach($x as $a) {
 //Se reorganiza los indices
 $x = array_values($x);
 
-echo sizeof($x) . "<br>";
+echo "Tamaño actualizado del array: " . sizeof($x) . "<br>";
 
 //Exercici 3
 
@@ -58,6 +59,7 @@ $arrayA = array("Rossana", "Arturo", "Constanza", "Eugenia", "Pedro");
 $characterH = 'h';
 $arrayB = array("hola", "php", "html");
 
+//Arrija false porque no todos los Strings incluyen el caracter a
 if(verificarArray($arrayA, $characterA)) {
     echo "True. <br>";
 } else {
