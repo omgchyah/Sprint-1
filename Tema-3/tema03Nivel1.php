@@ -73,7 +73,7 @@ if(verificarArray($arrayB, $characterH)) {
 }
 
 
-//Exercici
+//Exercici 4
 
 $datos = array(
     "nom" => "Rossana",
