@@ -9,7 +9,7 @@ class Employee {
     private $salary;
 
     //Constructor
-    public function __construct($var1, $var2) {
+    public function __construct(string $var1, int $var2) {
         $this->nom = $var1;
         $this->salary = $var2;
     }
@@ -24,8 +24,11 @@ class Employee {
         }
 
     }
+}
 
     //EXERCICI 2
+
+    //Clase padre
 
     class Shape {
 
@@ -34,7 +37,7 @@ class Employee {
         private $alto;
 
         //Constructor
-        public function __construct($ancho, $alto) {
+        public function __construct(int $ancho, int $alto) {
             $this->ancho = $ancho;
             $this->alto = $alto;
 
@@ -45,18 +48,35 @@ class Employee {
 
     class Triangulo extends Shape {
 
+        //No tiene parametros nuevos
+
         //contructor
-        public function __construct($ancho, $alto) {
+        public function __construct(int $ancho, int $alto) {
             parent::__construct($ancho, $alto);
         }
 
-        public function Area($ancho, $alto) {
+        //No necesita parámetros porque los hereda del padre
+        public function area(): float {
+
+            return (($this->ancho * $this->alto) / 2);
 
         }
 
     }
 
+    class Rectangulo extends Shape {
 
-}
+        //constructor
+        public function __construct($ancho, $alto) {
+            parent::__construct($ancho, $alto);
+        }
+
+        public function area(): float {
+
+            return $this->ancho * $this->alto;
+        }
+
+    }
+
 
 ?>
