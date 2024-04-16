@@ -5,6 +5,8 @@
 $array1 = array(30, 44, 100, 5.3, 12, 28, 45);
 $array2 = array(12, 45, 66, 77, 89.34, 200);
 
+//Buscar números repetidos de ambos arrays
+
 function compararArrays(array $array1, array $array2): array {
 
     $numIguales = [];
@@ -26,6 +28,8 @@ echo "Números que se repiten:<br>";
 foreach($numIguales as $num) {
     echo $num . "<br>";
 }
+
+//Combinar ambos arrays
 
 function combinarArrays(array $array1, array $array2): array {
 
@@ -79,7 +83,7 @@ function mostrarAllNotes(array $nombres): string {
 
 $notasTodos = mostrarAllNotes($nombres);
 
-echo $notasTodos;
+echo "<br>Notas de todos los alumnos:<br>" . $notasTodos;
 
 //Mostrar las notas de un solo alumno
 
@@ -91,17 +95,17 @@ function mostrarNotaAlumno(array $nombres, string $nombreAlumno): array {
 
 }
 
-$notas = mostrarNotaAlumno($nombres, "Rossana");
+$notasAlumno = mostrarNotaAlumno($nombres, "Rossana");
 
 $stringNotas = "Notas de Rossana: " . "<br>";
 
-foreach($notas as $nota) {
+foreach($notasAlumno as $nota) {
     $stringNotas .= "$nota <br>";
 }
 
 echo $stringNotas;
 
-//Calcular el promedio de notas de un solo alumno
+//Calcular el promedio de notas de cada alumno y la clase entera
 
 function promediarNotas(array $nombres): string {
 

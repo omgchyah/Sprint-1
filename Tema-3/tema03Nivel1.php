@@ -4,26 +4,26 @@
 
 $numeros = array(5, 6, 4, 9, 10);
 
-echo $numeros[0] . "<br>";
+$stringArray = " ";
 
-echo $numeros[1] . "<br>";
+foreach($numeros as $numero) {
+    $stringArray .= $numero . ", ";
+}
 
-echo $numeros[2] . "<br>";
+$stringArray = rtrim($stringArray, ", ");
 
-echo $numeros[3] . "<br>";
-
-echo $numeros[4] . "<br>";
+echo "Array: " . $stringArray;
 
 //EXERCICI 2
 
 $x = array (10, 20, 30, 40, 50, 60);
 
-echo "Número de elementos del array: " . sizeof($x) . "<br>";
+echo "<br>Número de elementos del array: " . sizeof($x) . "<br>";
 
 //Eliminar elementos de la lista con indice [0] el primero
 array_splice($x, 0, 1);
 
-echo "Array resultante:<br>";
+echo "Array resultante después de eliminar índice [0]:<br>";
 //Imprimir foreach
 foreach($x as $a) {
     echo $a . "<br>";
@@ -59,7 +59,7 @@ $arrayA = array("Rossana", "Arturo", "Constanza", "Eugenia", "Pedro");
 $characterH = 'h';
 $arrayB = array("hola", "php", "html");
 
-//Arrija false porque no todos los Strings incluyen el caracter a
+//Arroja false porque no todos los Strings incluyen el caracter a
 if(verificarArray($arrayA, $characterA)) {
     echo "True. <br>";
 } else {
@@ -83,6 +83,8 @@ $datos = array(
 );
 
 echo "Mi nombre es " . $datos["nom"] . " y tengo " . $datos["edad"] . " años. Mi email es " . $datos["email"] . " y mi comida favorita es el " . $datos["comida"] . "<br>";
+
+$arrayZ = array(1, 8, 9);
 
 
 

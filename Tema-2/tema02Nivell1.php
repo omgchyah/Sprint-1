@@ -59,8 +59,8 @@ echo $n * $m . "<br>";
 echo $x / $y . "<br>";
 echo $n / $m . "<br>";
 
-echo $x % $y . "<br>";
-echo $n % $m . "<br>";
+echo "Módulo" . $x % $y . "<br>";
+echo "Módulo" . $n % $m . "<br>";
 
 echo $x * 2 . "<br>";
 echo $y * 2 . "<br>";
@@ -107,7 +107,7 @@ function contador($numInicial, $incrementador, $numFinal) {
     return $resultado;
 }
 
-echo contador(10, 2, 100) . "<br>";
+echo "Contador: " . contador(10, 2, 100) . "<br>";
 
 //EXERCICI 5
 

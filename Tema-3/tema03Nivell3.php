@@ -10,8 +10,9 @@ function elevarCubo(int $num): int {
 
 $arrayCubo = array_map('elevarCubo', $arrayX);
 
+echo "Array elevado al cubo:<br>";
 foreach($arrayCubo as $num) {
-    echo $num . " ";
+    echo $num . "<br>";
 }
 
 //EXERCICI 2
@@ -28,6 +29,8 @@ $palabrasPares = array_filter($arrayY, 'conseguirPares');
 
 echo "<br>";
 
+echo "Palabras con número par de caracteres: <br>";
+
 //Mostrar con print_r
 print_r($palabrasPares);
 
@@ -38,30 +41,45 @@ foreach($palabrasPares as $palabra) {
     echo $palabra . " ";
 }
 
-//EXERCICI 3
+echo "<br>";
 
-$arrayZ =  array(44, 120, 58, 1000, 9, 2);
+//EXERCICI 3 Sumar todos los números primos de un Array
 
-function conseguirPrimos($num): bool {
+$arrayZ =  array(44, 120, 58, 1000, 9, 2, 3, 11);
 
-    if($num <= 1) {
-        return false;
+function conseguirPrimos(int $num): bool {
+
+    $esPrimo = true;
+
+    if ($num <= 1) {
+        $esPrimo = false;
     }
 
     for($i = 2; $i < $num; $i++) {
         if($num % $i == 0) {
-            return false;
-        } 
+            $esPrimo = false;
+        }
     }
 
-    return true;
-    
+    return $esPrimo;
+}
+
+function sumarPrimos($carry, $item) {
+ 
+    $carry += $item;
+
+    return $carry;
+
 }
 
 $arrayPrimos = array_filter($arrayZ, 'conseguirPrimos');
 
-$arrayReducido = array_reduce($arrayZ, 'conseguirPrimos');
+echo "<br> Números primos:<br>";
+print_r($arrayPrimos);
 
-print_r($arrayZ);
+$arrayReducido = array_reduce($arrayPrimos, "sumarPrimos");
+
+echo "<br> Suma de números primos:<br>";
+print_r($arrayReducido);
 
 ?>
