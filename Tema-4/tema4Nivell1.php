@@ -9,9 +9,9 @@ class Employee {
     private $salary;
 
     //Constructor
-    public function __construct(string $var1, int $var2) {
-        $this->nom = $var1;
-        $this->salary = $var2;
+    public function __construct(string $nom, int $salary) {
+        $this->nom = $nom;
+        $this->salary = $salary;
     }
 
     //Método propio o personalizado
