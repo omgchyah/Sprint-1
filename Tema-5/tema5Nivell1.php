@@ -1,19 +1,20 @@
 <?php
 
-abstract class Animal
+abstract class Animal {
 
-{
+    private $nombre;
+
+    public function __construct(string $nombre) {
+        $this->nombre = $nombre;
+    }
 
    abstract public function makeSound();
 
 }
 
-class Dog extends Animal
-
-{
+class Dog extends Animal {
 
     //Atributos
-    private $nombre;
     private $raza;
     private $manchas;
 
@@ -21,7 +22,7 @@ class Dog extends Animal
     public function __construct(string $nombre, string $raza, bool $manchas)
     
     {
-        $this->nombre =  $nombre;
+        parent::__construct($nombre);
         $this->raza = $raza;
         $this->manchas = $manchas;
 
@@ -35,18 +36,15 @@ class Dog extends Animal
 
 }
 
-class Cat extends Animal
-
-{
+class Cat extends Animal {
         //Atributos
-    private $nombre;
     private $color;
     private $comidaFavorita;
 
     //constructor
     public function __construct(string $nombre, string $color, string $comidaFavorita)
     {
-        $this->nombre = $nombre;
+        parent::__construct($nombre);
         $this->color = $color;
         $this->comidaFavorita = $comidaFavorita;
     }
