@@ -88,7 +88,7 @@ foreach($figures as $figure) {
     echo $figure . "<br>";
 }
 
-//Numero de tiradas
+//Numero de tiradas total
 
 $pokerDice = new PokerDice();
 
