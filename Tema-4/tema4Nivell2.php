@@ -4,10 +4,6 @@ class PokerDice {
 
     private $figure;
 
-    //constructor
-    public function __construct() {
-    }
-
     //Método propio de probabilidad, resulta número aleatorio del 0 al 100
     public function throw(): int {
 
@@ -90,7 +86,7 @@ foreach($figures as $figure) {
 
 //Numero de tiradas total
 
-//Instancia de la casa
+//Instancia de la clase
 
 $pokerDice = new PokerDice();
 

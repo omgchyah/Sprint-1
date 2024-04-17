@@ -5,8 +5,8 @@
 class Employee {
 
     //Atributos
-    private $nom;
-    private $salary;
+    public $nom;
+    public $salary;
 
     //Constructor
     public function __construct(string $nom, int $salary) {
@@ -17,7 +17,7 @@ class Employee {
     //Método propio o personalizado
     public function print() {
 
-        if($this->salary > 60000) {
+        if($this->salary > 6000) {
             echo "El empleado $this->nom gana $this->salary euros y no tiene que pagar impuestos.";
         } else {
             echo "El empleado $this->nom gana $this->salary euros y tiene que pagar impuestos.";
@@ -33,11 +33,11 @@ class Employee {
     class Shape {
 
         //Atributos
-        private $ancho;
-        private $alto;
+        public $ancho;
+        public $alto;
 
         //Constructor
-        public function __construct(int $ancho, int $alto) {
+        public function __construct(float $ancho, float $alto) {
             $this->ancho = $ancho;
             $this->alto = $alto;
 

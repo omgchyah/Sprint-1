@@ -19,9 +19,7 @@ class Dog extends Animal {
     private $manchas;
 
     //Constructor
-    public function __construct(string $nombre, string $raza, bool $manchas)
-    
-    {
+    public function __construct(string $nombre, string $raza, bool $manchas) {
         parent::__construct($nombre);
         $this->raza = $raza;
         $this->manchas = $manchas;
@@ -42,16 +40,14 @@ class Cat extends Animal {
     private $comidaFavorita;
 
     //constructor
-    public function __construct(string $nombre, string $color, string $comidaFavorita)
-    {
+    public function __construct(string $nombre, string $color, string $comidaFavorita) {
         parent::__construct($nombre);
         $this->color = $color;
         $this->comidaFavorita = $comidaFavorita;
     }
 
     //Método abstracto
-    public function makeSound(): string
-    {
+    public function makeSound(): string {
         return "Miau miau!";
     }
 
