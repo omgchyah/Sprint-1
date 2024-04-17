@@ -3,10 +3,10 @@
 abstract class Shape {
 
     //Atributos
-    private $ancho;
-    private $alto;
+    public $ancho;
+    public $alto;
 
-    //constructos
+    //constructor
     public function __construct(float $ancho, float $alto) {
         $this->ancho = $ancho;
         $this->alto = $alto;

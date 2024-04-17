@@ -15,8 +15,8 @@ abstract class Animal {
 class Dog extends Animal {
 
     //Atributos
-    private $raza;
-    private $manchas;
+    public $raza;
+    public $manchas;
 
     //Constructor
     public function __construct(string $nombre, string $raza, bool $manchas) {
@@ -36,8 +36,8 @@ class Dog extends Animal {
 
 class Cat extends Animal {
         //Atributos
-    private $color;
-    private $comidaFavorita;
+    public $color;
+    public $comidaFavorita;
 
     //constructor
     public function __construct(string $nombre, string $color, string $comidaFavorita) {
