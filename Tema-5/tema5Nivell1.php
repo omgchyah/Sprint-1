@@ -8,7 +8,7 @@ abstract class Animal {
         $this->nombre = $nombre;
     }
 
-   abstract public function makeSound();
+   abstract public function makeSound(): string;
 
 }
 
@@ -62,8 +62,6 @@ echo "<br>";
 $perro1 = new Dog("Fido", "Chihuahua", true);
 
 echo $perro1->makeSound();
-
-
 
 
 ?>
