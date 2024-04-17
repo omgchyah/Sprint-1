@@ -90,6 +90,8 @@ foreach($figures as $figure) {
 
 //Numero de tiradas total
 
+//Instancia de la casa
+
 $pokerDice = new PokerDice();
 
 $numTirades = $pokerDice->getTotalThrows($dados);
