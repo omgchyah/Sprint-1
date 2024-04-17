@@ -95,8 +95,9 @@ $rectangle1 =  new Rectangle(6, 5.4);
 
 echo $rectangle1->typeShape() . $rectangle1->area() . ".<br>";
 
+//Instanciar circulo desde la subclase
 $circulo1 = new Circle(4);
 
-echo $circulo1->typeShape() . $circulo1->area() . ".";
+echo $circulo1->typeShape() .$circulo1->area() . ".";
 
 ?>
