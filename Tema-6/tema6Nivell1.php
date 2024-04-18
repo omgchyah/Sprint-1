@@ -25,7 +25,7 @@ if(isset($_SESSION["username"])) {
     $value = $_SESSION["username"];
 
     //Mostrar variable
-    echo "Valor de 'username' es: " . $value ".";
+    echo "Valor de 'username' es: " . $value . ".";
 } else {
     echo "La variable 'username' no se ha guardado.";
 }
