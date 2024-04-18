@@ -1,4 +1,7 @@
 <?php
+
+//EXERCICI 1 Y 2 
+
 //Guardar datos mientras la sesión siga activa
 session_start();
 
