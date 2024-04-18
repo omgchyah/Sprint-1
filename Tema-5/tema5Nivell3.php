@@ -7,6 +7,7 @@ interface Description {
 
 abstract class Shape {
 
+    //Que hace la clase abstracta, retornar algo??
 abstract public function area(): float;
 
 }
