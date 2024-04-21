@@ -5,8 +5,36 @@
 //Guardar datos mientras la sesión siga activa
 session_start();
 
+//Se verifica que solo se procesa datos usando el método POST usando un "if"
 if($_SERVER["REQUEST_METHOD"] == "POST") {
 
+    $mensajeError = "";
+    $errorDetectado = false;
+
+    if(empty($_POST["username"])) {
+        $mensajeError = "Ingrese usuario.<br>";
+        $errorDetectado = true;
+    }
+    if (empty($_POST["nombre"])) {
+        $mensajeError = "Ingrese nombre.<br>";
+        $errorDetectado = true;
+    }
+    if (empty($_POST["apellidos"])) {
+        $mensajeError = "Ingrese apellido/s.<br>";
+        $errorDetectado = true;
+    }
+    if (empty($_POST["email"] || !filter_var($_POST["email"], FILTER_VALIDATE_EMAIL))) {
+        $mensajeError = "Ingrese un e-mail válido.<br>";
+        $errorDetectado = true;
+    } 
+    if (empty($_POST["password"]) || strlen($_POST["password"]) < 8) {
+        $mensajeError = "Ingrese una contraseña válida.<br>";
+        $errorDetectado = true;
+    } 
+
+    if ($errorDetectado) {
+        echo "Error detectado: " . $mensajeError;
+    } else {
     //Recuperar los datos del formulario
     $_SESSION["username"] = $_POST["username"];
     $_SESSION["nombre"] = $_POST["nombre"];
@@ -20,6 +48,9 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
     echo "<p>Apellidos: {$_SESSION["apellidos"]}</p>";
     echo "<p>E-mail: {$_SESSION["email"]}</p>";
     echo "<p>Contraseña guardada con éxito.</p>";
+    }
+
+
 }
 
 //Verificar si guarda datos en la variable $_SESSION
