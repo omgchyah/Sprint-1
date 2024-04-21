@@ -27,8 +27,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
         $mensajeError = "Ingrese un e-mail válido.<br>";
         $errorDetectado = true;
     } 
-    if (empty($_POST["password"]) || strlen($_POST["password"]) < 8) {
-        $mensajeError = "Ingrese una contraseña válida.<br>";
+    if (strlen($_POST["password"]) < 8) {
+        $mensajeError = "Contraseña deber ser mayor a 8 caracteres.<br>";
         $errorDetectado = true;
     } 
 
@@ -55,14 +55,14 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
 
 //Verificar si guarda datos en la variable $_SESSION
 
-if(isset($_SESSION["username"])) {
+/*if(isset($_SESSION["username"])) {
     $value = $_SESSION["username"];
 
     //Mostrar variable
     echo "Valor de 'username' es: " . $value . ".";
 } else {
     echo "La variable 'username' no se ha guardado.";
-}
+}*/
 
 
 
