@@ -21,7 +21,7 @@ class Buscador {
 
         $path = $this->getDir();
 
-        return "Path to file is: " . $path;
+        return "Ruta de archivo: " . $path;
     }
 
 }
