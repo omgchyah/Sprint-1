@@ -26,16 +26,17 @@ class Recurso {
     //Constructor
     public function __construct(string $nombre, Tema $tema, string $URL, Tipo $tipoRecurso) {
         $this->nombre = $nombre;
-        $this->tema = Tema::{$tema};
+        $this->tema = $tema;
         $this->URL = $URL;
-        $this->tipoRecurso = Tipo::{$tipoRecurso};
+        $this->tipoRecurso = $tipoRecurso;
     }
 
     public function __toString() {
-        return "Nombre: " . $this->nombre . "<br>"
-        "Tema: " . $this->tema->name . "<br>"
-        "URL: " . $this->URL . "<br>"
-        "Tipo: " . Tipo::{$tipoRecurso} . "<br>";
+        return "Información del recurso: <br>" .
+        "Nombre: " . $this->nombre . "<br>" .
+        "Tema: " . $this->tema->name . "<br>" . //name es para accedir al string de la clase Tema
+        "URL: " . $this->URL . "<br>" .
+        "Tipo: " . $this->tipoRecurso->name . "<br>"; //No se puede imprimir un objeto del e num
     }
 
 
@@ -48,10 +49,10 @@ $articuloPHP1 = new Recurso(
   Tipo::Articulo
 );
 
-echo $articuloPHP1->nombre;
-echo $articuloPHP1->tema;
-echo $articuloPHP1->URL;
-echo $articuloPHP1->tipoRecurso;
+echo $articuloPHP1->nombre . "<br>";
+echo $articuloPHP1->tema->name . "<br>";
+echo $articuloPHP1->URL . "<br>";
+echo $articuloPHP1->tipoRecurso->name . "<br>";
 
 echo $articuloPHP1;
 
