@@ -26,19 +26,32 @@ class Recurso {
     //Constructor
     public function __construct(string $nombre, Tema $tema, string $URL, Tipo $tipoRecurso) {
         $this->nombre = $nombre;
-        $this->tema = $tema;
+        $this->tema = Tema::{$tema};
         $this->URL = $URL;
-        $this->tipoRecurso = $tipoRecurso;
+        $this->tipoRecurso = Tipo::{$tipoRecurso};
     }
 
     public function __toString() {
-        return "Nombre: " . $this->nombre;
+        return "Nombre: " . $this->nombre . "<br>"
+        "Tema: " . $this->tema->name . "<br>"
+        "URL: " . $this->URL . "<br>"
+        "Tipo: " . Tipo::{$tipoRecurso} . "<br>";
     }
 
 
 }
 
-$articuloPHP1 = new Recurso("Enum in PHP — Real life examples", Tema::PHP, "https://medium.com/@danielarcher/enum-in-php-real-life-examples-a596ba421f3c", Tipo::Articulo);
+$articuloPHP1 = new Recurso(
+  "Enum in PHP — Real life examples",
+  Tema::PHP,
+  "https://medium.com/@danielarcher/enum-in-php-real-life-examples-a596ba421f3c",
+  Tipo::Articulo
+);
+
+echo $articuloPHP1->nombre;
+echo $articuloPHP1->tema;
+echo $articuloPHP1->URL;
+echo $articuloPHP1->tipoRecurso;
 
 echo $articuloPHP1;
 
