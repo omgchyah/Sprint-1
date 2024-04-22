@@ -32,7 +32,7 @@ class Recurso {
     }
 
     public function __toString() {
-        return "Información del recurso: <br>" .
+        return "<br>Información del recurso: <br>" .
         "Nombre: " . $this->nombre . "<br>" .
         "Tema: " . $this->tema->name . "<br>" . //name es para accedir al string de la clase Tema
         "URL: " . $this->URL . "<br>" .
