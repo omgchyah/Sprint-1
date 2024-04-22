@@ -22,7 +22,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
     if (empty($_POST["apellidos"])) {
         $mensajeError = "Ingrese apellido/s.<br>";
         $errorDetectado = true;
-    }
+    } //Validad e-mail
     if (empty($_POST["email"] || !filter_var($_POST["email"], FILTER_VALIDATE_EMAIL))) {
         $mensajeError = "Ingrese un e-mail válido.<br>";
         $errorDetectado = true;
