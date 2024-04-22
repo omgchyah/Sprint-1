@@ -1,6 +1,6 @@
 <?php
 
-require_once "C:/Users/User/xampp/htdocs/PHP/Sprint-1/Tema-6/tema6Nivell2.php";
+require_once "C:/Users/User/xampp/htdocs/PHP/Sprint-1/Tema-6/Tema6-Nivell2/tema6Nivell2.php";
 
 class Buscador {
 
