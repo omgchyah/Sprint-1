@@ -71,7 +71,7 @@
         use Turbo;
 
     public function boost(): string {
-            return "Se ha iniciado el turbo y la velocidad supera los " . $this->velocidadMax . " km/h.";
+            return "Se ha iniciado el turbo y la velocidad supera los " . $this->velocidadMax . " km/h.<br>";
         }
     }
 
