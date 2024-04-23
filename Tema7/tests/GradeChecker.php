@@ -12,15 +12,15 @@ class GradeChecker {
         $this->nota = $nota;
     }
 
-    public function calificarEstudiante(int $nota): string {
+    public function calificarEstudiante(): string {
 
         $resultado = "";
 
-        if ($nota >= 60) {
+        if ($this->nota >= 60) {
             $resultado = "Enhorabuena. Estás en la primera división.";
-        } else if ($nota < 60) {
+        } else if ($this->nota < 60) {
             $resultado = "Muy bien. Estás en la Segunda División.";
-        } else if ($nota < 45) {
+        } else if ($this->nota < 45) {
             $resultado = "Estás en la Tercera División.";
         } else {
             $resultado = "Lo siento. Has reprobado.";

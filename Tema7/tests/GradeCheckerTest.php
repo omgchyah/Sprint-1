@@ -1,13 +1,13 @@
 <?php declare(strict_types=1);
 
 use PHPUnit\Framework\TestCase;
-require "GradeCheck.php";
+require "GradeChecker.php";
 
 class GradeCheckerTest extends TestCase {
 
     public function testCalificarEstudiante(): void {
         $calificarEstudiante = new GradeChecker(80);
-        $this->assertTrue($calificarEstudiante->calificarEstudiante());
+        $this->assertEquals("Enhorabuena. Estás en la primera división.", $calificarEstudiante->calificarEstudiante());
     }
 
 
