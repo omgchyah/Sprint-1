@@ -1,8 +1,30 @@
 {
+    
+"name": "Users/Tema-7",
+"autoload": {
+"psr-4": {
+"Users\\Tema-7\\": ""
+}
+},
+"autoload-dev": {
+"psr-4": {
+"Users\\tests\\": "tests/"
+}
+},
+"authors": [
+{
+"name": "omgchyah",
+"email": "rossana.liendo@gmail.com"
+}
+],
     "require-dev": {
         "phpunit/phpunit": "^11.1"
     },
     "require": {
         "nesbot/carbon": "^3.3"
-    }
+    },
+    "scripts": {
+        "test": "phpunit"
+        }
+        
 }
