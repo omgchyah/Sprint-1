@@ -1,0 +1,1 @@
+{"version":1,"defects":{"Users\\tests\\NumberCheckerTest::testIsEven":8,"tema7\\NumberCheckerTest::testIsEven":8},"times":{"Users\\tests\\NumberCheckerTest::testIsEven":0.014,"tema7\\NumberCheckerTest::testIsEven":0.015,"NumberCheckerTest::testIsEven":0.003}}

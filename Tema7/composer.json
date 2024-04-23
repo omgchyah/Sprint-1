@@ -1,9 +1,9 @@
 {
     
-"name": "Users/Tema-7",
+"name": "Users/Tema7",
 "autoload": {
 "psr-4": {
-"Users\\Tema-7\\": ""
+"Users\\Tema7\\": ""
 }
 },
 "autoload-dev": {

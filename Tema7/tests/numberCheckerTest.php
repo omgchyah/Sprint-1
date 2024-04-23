@@ -1,23 +1,16 @@
 <?php declare(strict_types=1);
 
-namespace Users\tests;
-
 use PHPUnit\Framework\TestCase;
-use Users\Tema7\NumberChecker;
+require 'NumberChecker.php';
 
 class NumberCheckerTest extends TestCase {
 
     public function testIsEven(): void {
-        $numberChecker = new NumberCheck(4);
+        $numberChecker = new NumberChecker(4);
         $this->assertTrue($numberChecker->isEven());
     }
 
     /*
-public function testIsEven_WithEvenNumber_ReturnsTrue(): void
-    {
-        $numberChecker = new NumberChecker(4);
-        $this->assertTrue($numberChecker->isEven());
-    }
 
     public function testIsEven_WithOddNumber_ReturnsFalse(): void
     {
