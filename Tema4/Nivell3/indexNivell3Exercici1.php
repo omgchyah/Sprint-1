@@ -14,7 +14,7 @@ $cinema1->agregarPeliculas("King Fu Panda 4", 94, "Mike Mitchell");
 $peliculasMOOBY = $cinema1->buscarPeliculas();
 
 foreach ($peliculasMOOBY as $movie) {
-    echo "Movie: " . $movie->getNombre() . ", Duration: " . $movie->getDuracion() . " minutes, Director: " . $movie->getDirector() . "<br>";
+    echo "Movie: " . $movie->getNomPelicula() . ", Duration: " . $movie->getDuracion() . " minutes, Director: " . $movie->getDirector() . "<br>";
 }
 
 ?>

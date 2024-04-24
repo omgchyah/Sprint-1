@@ -17,7 +17,7 @@
 
         //Getter methods
 
-        public function getNombrePelicula(): string {
+        public function getNomPelicula(): string {
             return $this->nomPelicula;
         }
 
