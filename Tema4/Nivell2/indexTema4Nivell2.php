@@ -10,14 +10,14 @@ function crearArrayDados(int $numDados): array {
      $arrayDados = [];
 
     for($i = 0; $i < $numDados; $i++) {
-        $arrayDados[] = $i;
+        $arrayDados[] = new PokerDice();
     }
 
     return $arrayDados;
 }
 
 //Funcion para obtener las figuras del array de dados
-function getFigures(array $arrayDados) {
+function getFigures(array $arrayDados): array {
 
     $arrayFigures = [];
 
@@ -47,9 +47,11 @@ foreach($fiveFigures as $figure) {
 //Llamar al metodo para obtener el numero total de tiradas del array de dados
 $pokerDice = new PokerDice();
 
-$numTiradas = $pokerDice->getTotalThrows($arrayDados);
+$numTiradas = $pokerDice->getTotalThrows($fiveDados);
 
 echo "El número total de tiradas es de " . $numTiradas;
+
+?>
 
 
 

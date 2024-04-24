@@ -29,9 +29,9 @@ class PokerDice {
         } else if ($randomNumber <= 66) {
             $figure = "J";
         } else if ($randomNumber <= 83) {
-            $figure = 7;
+            $figure = "7";
         } else {
-            $figure = 8;
+            $figure = "8";
         }
 
         return $figure;
@@ -50,6 +50,6 @@ class PokerDice {
        return $totalThrows; 
     }
 
-    
+
     
 }
