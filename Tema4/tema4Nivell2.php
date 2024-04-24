@@ -74,6 +74,7 @@ function tirar5Dados(array $dados): array {
         $figures[] = $figure;
     }
 
+
     return $figures;
 }
 
