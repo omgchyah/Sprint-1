@@ -2,7 +2,7 @@
 
 require "classPokerdice.php";
 
-$numDados = 0;
+$numDados = 5;
 
 //Funcion para crear un array de dados
 function crearArrayDados(int $numDados): array {
@@ -31,7 +31,7 @@ function getFigures(array $arrayDados): array {
 
 
 //Crear Array de dados
-$fiveDados = crearArrayDados(5);
+$fiveDados = crearArrayDados($numDados);
 
 //Obtener las figuras de los 5 dados
 $fiveFigures = getFigures($fiveDados);
