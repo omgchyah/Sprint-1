@@ -1,33 +1,47 @@
-<?php
+<?php declare(strict_types=1);
 
     class Pelicula {
 
-    //Atributos
-    private $nomPelicula;
-    private $duracion;
-    private $director;
+        //Atributos
+        public $nomPelicula;
+        public $duracion;
+        public $director;
 
-    //Constructor
+        //Constructor
 
-    public function __construct(string $nomPelicula, int $duracion, string $director) {
-        $this->nomPelicula =  $nomPelicula;
-        $this->duracion = $duracion;
-        $this->director = $director;
-    }
+        public function __construct(string $nomPelicula, int $duracion, string $director) {
+            $this->nomPelicula =  $nomPelicula;
+            $this->duracion = $duracion;
+            $this->director = $director;
+        }
 
-    //Getter methods
+        //Getter methods
 
-    public function getNombrePelicula(): string {
-        return $this->nomPelicula;
-    }
+        public function getNombrePelicula(): string {
+            return $this->nomPelicula;
+        }
 
-    public function getDuracion(): int {
-        return $this->duracion;
-    }
+        public function getDuracion(): int {
+            return $this->duracion;
+        }
 
-    public function getDirector(): string {
-        return $this->director;
-    }
+        public function getDirector(): string {
+            return $this->director;
+        }
+
+        //Setter methods
+
+        public function setNomPelicula($nomPelicula): void {
+            $this->nomPelicula =$nomPelicula;
+        }
+
+        public function setDuracion($duracion): void {
+            $this->duracion = $duracion;
+        }
+
+        public function setDirector($director): void {
+            $this->director = $director;
+        }
 
 
     }
