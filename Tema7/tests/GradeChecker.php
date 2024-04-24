@@ -22,7 +22,7 @@ class GradeChecker {
             $resultado = "Muy bien. Estás en la Segunda División.";
         } else if ($this->nota < 45) {
             $resultado = "Estás en la Tercera División.";
-        } else {
+        } else if ($this->nota < 33) {
             $resultado = "Lo siento. Has reprobado.";
         }
 
