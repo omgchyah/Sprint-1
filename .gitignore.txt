@@ -1,0 +1,2 @@
+/Tema7/vendor/
+/TEST/vendor
