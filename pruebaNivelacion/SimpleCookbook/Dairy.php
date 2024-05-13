@@ -1,10 +1,9 @@
 <?php declare(strict_types=1);
 
-include "Ingredient.php";
 
 class Dairy extends Ingredient {
 
-    public function __construct() {
+    public function __construct(string $name, float $quantity, Unit $unit) {
         parent::__construct($name, $quantity, $unit);
     }
 

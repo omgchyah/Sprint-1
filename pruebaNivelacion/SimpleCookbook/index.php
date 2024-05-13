@@ -1,18 +1,17 @@
 <?php declare(strict_types=1);
 
-//include "recipe.php";
-include "Ingredient.php";
+include "recipe.php";
 include "Meat.php";
-include "Dairy.php";
 include "Vegetable.php";
+include "Dairy.php";
 
 $recipe1 = new Recipe("Shepherd's pie");
 
-$ingredient1 = new Meat("Lean ground beef", 1, Quantity::Pound);
-$ingredient2 = new Meat("Beef broth", 1, Quantity::Cup);
-$ingredient3 = new Vegetable("Potatoes", 2, Quantity::Pound);
-$ingredient4 = new Vegetable("Frozen peas and carrots", 1, Quantity::Cup);
-$ingredient5 = new Dairy("Parmesan cheese", 0.25, Quantity::Cup);
+$ingredient1 = new Meat("Lean ground beef", 1, Unit::Pound);
+$ingredient2 = new Meat("Beef broth", 1, Unit::Cup);
+$ingredient3 = new Vegetable("Potatoes", 2, Unit::Pound);
+$ingredient4 = new Vegetable("Frozen peas and carrots", 1, Unit::Cup);
+$ingredient5 = new Dairy("Parmesan cheese", 0.25, Unit::Cup);
 
 $recipe1->addIngredient($ingredient1);
 $recipe1->addIngredient($ingredient2);
@@ -28,11 +27,44 @@ $recipe1->addInstructions($instruction1);
 $recipe1->addInstructions($instruction2);
 $recipe1->addInstructions($instruction3);
 
-$arrayIngredients = $recipe1->getIngredients;
+$arrayIngredients = $recipe1->getIngredients();
 
 foreach($arrayIngredients as $ingredient) {
-    echo $ingredient . PHP_EOL;
+    echo $ingredient->name . PHP_EOL . "<br>";
 }
+
+foreach($arrayIngredients as $ingredient) {
+    $looking = "beef";
+    $found = "";
+    if(strpos($ingredient->name, $looking)) {
+        $found = $ingredient->name;
+    }
+
+    echo $found . "<br>";
+
+    foreach($arrayIngredients as $ingredient) {
+        $looking = "cheese";
+        $ingredientFound = "";
+        if(strpos($ingredient->name, $looking)) {
+            $ingredientFound = $ingredient->name;
+        }
+    }
+
+    echo $ingredientFound . "<br>";
+
+   foreach($ingredient1->getDietaryImpact() as $impact) {
+    echo $impact . "<br>";
+   }
+
+
+
+
+
+}
+
+
+
+
 
 
 
