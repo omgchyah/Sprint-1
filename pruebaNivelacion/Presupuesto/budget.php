@@ -14,7 +14,7 @@ class Budget {
         $this->iva = $iva;
     }
 
-    public function getId(): id {
+    public function getId(): int {
         return $this->id;
     }
 

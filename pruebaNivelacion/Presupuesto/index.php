@@ -41,4 +41,19 @@ foreach($arrayClients as $client) {
     echo $client . PHP_EOL;
 }
 
+function seeClient(array $arrayClients, string $name): int {
+
+    $index = 0;
+    $found = false;
+ 
+    for(int $i = 0; $i < count($arrayClients); $i++) {
+        if(in_array($name, $arrayClients[$i])) {
+           $index = $i; 
+            $found = true;
+    }
+}
+
+    return $index;
+}
+
 ?>
