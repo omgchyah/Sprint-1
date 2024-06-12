@@ -10,12 +10,13 @@ $str = "números";
 $esPetit = true;
 
 if($esPetit){
-    echo "Los números $numInt y $numDou son $str pequeños." . "<br>";
+    echo "Los números $numInt y $numDou son $str pequeños." . PHP_EOL;
 }
 
-const MI_NOMBRE = "Mi nombre es Rossana y me gusta programar.";
+//Editado
+define("MI_NOMBRE", "Mi nombre es Rossana y me gusta programar.");
 
-$modoTitulo = ucwords(MI_NOMBRE) . "<br>";
+$modoTitulo = ucwords(MI_NOMBRE) . PHP_EOL;
 
 //EXERCICI 2 Imprimir String "Hello, World!"
 
@@ -28,11 +29,11 @@ $mida = strlen($helloWorld);
 echo $mida . "<br>";
 
 $alReves = strrev($helloWorld);
-echo $alReves . "<br>";
+echo $alReves . PHP_EOL;
 
 $str1 = "Este es el curso de PHP";
 
-echo $str1 . " y aprendemos a escribir " . $helloWorld . " o " . $helloMayus . " que tiene " . $mida . " caracteres y al revés se escribe " . $alReves . "<br>";
+echo $str1 . " y aprendemos a escribir " . $helloWorld . " o " . $helloMayus . " que tiene " . $mida . " caracteres y al revés se escribe " . $alReves . PHP_EOL;
 
 //EXERCICI 3 Operadores y función Calculadora
 
@@ -69,9 +70,10 @@ echo $m * 2 . "<br>";
 
 echo $x + $y + $n + $m . "<br>";
 
-echo $x * $y * $n * $m . "<br>";
+echo $x * $y * $n * $m . PHP_EOL;
 
-function miCalculadora($num1, $num2, $operacion) {
+//EDITADO para que acepte un parámetro de la operación
+function miCalculadora(float $num1, float $num2, $operacion): float {
 
     $resultado = 0;
 
@@ -94,9 +96,13 @@ echo "Resultado de mi operación: " . miCalculadora(3, 4, "-") . "<br>";
 
 //Parametros: número inicial, incrementador (En este caso, cuenta de 2 en 2) y número final
 
+//EDITADO. Se agregó número por defecto
+
 function contador($numInicial, $incrementador, $numFinal) {
 
-    $resultado = "";
+    $numFinal= 10;
+
+    $resultado = 0;
 
     while ($numInicial <= $numFinal) {
         $simbolo = ($numInicial < $numFinal) ? " + " : ".";
@@ -113,16 +119,16 @@ echo "Contador: " . contador(10, 2, 100) . "<br>";
 
 //Funcion que valora a los estudiantes de acuerdo a sus notas
 
-
+//EDITADO para quitar las condiciones redundantes
 function gradoEstudiante($nota) {
 
     $resultado = "";
 
     if ($nota >= 60) {
         $resultado = "Enhorabuena. Estás en la primera división.";
-    } else if ($nota >= 45 && $nota < 60) {
+    } else if ($nota >= 45) {
         $resultado = "Muy bien. Estás en la Segunda División.";
-    } else if ($nota >= 33 && $nota < 45) {
+    } else if ($nota >= 33) {
         $resultado = "Estás en la Tercera División.";
     } else {
         $resultado = "Lo siento. Has reprobado.";
@@ -132,7 +138,7 @@ function gradoEstudiante($nota) {
     
 }
 
-echo gradoEstudiante(32) . "<br>";
+echo gradoEstudiante(60) . "<br>";
 
 //EXERCICI 6
 
