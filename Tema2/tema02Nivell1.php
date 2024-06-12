@@ -73,7 +73,7 @@ echo $x + $y + $n + $m . "<br>";
 echo $x * $y * $n * $m . PHP_EOL;
 
 //EDITADO para que acepte un parámetro de la operación
-function miCalculadora(float $num1, float $num2, $operacion): float {
+function calcular(float $num1, float $num2, $operacion): float {
 
     $resultado = 0;
 
@@ -90,7 +90,7 @@ function miCalculadora(float $num1, float $num2, $operacion): float {
     return $resultado;
 }
 
-echo "Resultado de mi operación: " . miCalculadora(3, 4, "-") . "<br>";
+echo "Resultado de mi operación: " . calcular(3, 4, "-") . "<br>";
 
 //Exercici 4 Programa contador
 
