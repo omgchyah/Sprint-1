@@ -98,9 +98,7 @@ echo "Resultado de mi operación: " . calcular(3, 4, "-") . "<br>";
 
 //EDITADO. Se agregó número por defecto
 
-function contador($numInicial, $incrementador, $numFinal) {
-
-    $numFinal= 10;
+function contador($numInicial, $incrementador, $numFinal  = 10) {
 
     $resultado = 0;
 
