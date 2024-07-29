@@ -100,7 +100,7 @@ echo "Resultado de mi operación: " . calcular(3, 4, "-") . "<br>";
 
 function contador($numInicial, $incrementador, $numFinal  = 10) {
 
-    $resultado = 0;
+    $resultado = "";
 
     while ($numInicial <= $numFinal) {
         $simbolo = ($numInicial < $numFinal) ? " + " : ".";
@@ -111,7 +111,7 @@ function contador($numInicial, $incrementador, $numFinal  = 10) {
     return $resultado;
 }
 
-echo "Contador: " . contador(10, 2);
+echo "Contador: " . contador(0, 2) . "<br>";
 echo "Contador: " . contador(10, 2, 100) . "<br>";
 
 
