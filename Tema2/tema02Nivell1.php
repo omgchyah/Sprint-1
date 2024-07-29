@@ -111,7 +111,9 @@ function contador($numInicial, $incrementador, $numFinal  = 10) {
     return $resultado;
 }
 
+echo "Contador: " . contador(10, 2);
 echo "Contador: " . contador(10, 2, 100) . "<br>";
+
 
 //EXERCICI 5
 
